@@ -1,4 +1,33 @@
 # Group-Prototype-1
+
+This repository is a starter scaffold for a React + Vite + TypeScript project.
+
+Features:
+- Vite dev server and build
+- React + TypeScript
+- ESLint and Prettier configuration
+- Vitest + Testing Library for tests
+
+Quick start
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Run dev server:
+
+```bash
+npm run dev
+```
+
+3. Run tests:
+
+```bash
+npm test
+```
+
 Da-vinci team group prototype 1. 
 This is based of images in: 
 
