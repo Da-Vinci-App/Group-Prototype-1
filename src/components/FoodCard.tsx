@@ -1,8 +1,9 @@
 import React from 'react';
 import RatingStars from './RatingStars';
+import ImagePlaceholder from './ImagePlaceholder';
 
 interface FoodCardProps {
-  image: string;
+  image: 'burger' | 'pizza' | 'chicken' | 'salad' | 'dessert' | 'drink';
   name: string;
   price: number;
   rating?: number;
@@ -17,9 +18,15 @@ const FoodCard: React.FC<FoodCardProps> = ({
   onAddToCart,
 }) => {
   return (
-    <div className="card-base card-hover flex flex-col">
+    <div className="card-base card-hover flex flex-col h-full">
       <div className="relative h-40 bg-gray-100 flex items-center justify-center overflow-hidden">
-        <div className="text-6xl">{image}</div>
+        <ImagePlaceholder
+          category={image}
+          alt={name}
+          className="w-full h-full"
+          width={500}
+          height={500}
+        />
       </div>
       <div className="flex-1 p-4 flex flex-col justify-between">
         <div>
