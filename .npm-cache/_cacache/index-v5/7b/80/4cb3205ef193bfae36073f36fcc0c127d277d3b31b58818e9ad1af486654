@@ -1,2 +1,6 @@
 
+<<<<<<< Updated upstream
 b0ff859343ef6a6aa6621e7d1f1733dff3eb6217	{"key":"security-advisory:@typescript-eslint/type-utils:EHArtJU0pzySroDQUvl2raqBnzpSIlTA8s8Nz1is77BPj+FyBukS5Xs2f5oOcVdWaXJWBEhEdruugU7HszfVkQ==","integrity":"sha512-PZkG1Opekn7nWIvq0CvwVhgn5UoIM3odm4r+yt6ch7rCTNujiYBDrjTaJFjFuLTOfkg/RMvF2NjbHq5SrKm5ug==","time":1773059048777,"size":50045}
+=======
+96eb92903f3139bfe0f677564a5c2f7de19d0573	{"key":"security-advisory:@typescript-eslint/type-utils:EHArtJU0pzySroDQUvl2raqBnzpSIlTA8s8Nz1is77BPj+FyBukS5Xs2f5oOcVdWaXJWBEhEdruugU7HszfVkQ==","integrity":"sha512-dTpjgP9fABILX1h/QQBz3+ACnNey8lp6X0vBLh5rtPFBuvu6xJA5J4RGkrroByFr1Ok0wLN1yMRKGJpk96SppQ==","time":1774268805224,"size":50426}
+>>>>>>> Stashed changes

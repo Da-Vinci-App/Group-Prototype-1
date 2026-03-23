@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
+import LoginScreen from './components/LoginScreen'
+import SignUpScreen from './components/SignUpScreen'
+
+type ScreenType = 'login' | 'signup'
 
 export default function App() {
+  const [currentScreen, setCurrentScreen] = useState<ScreenType>('login')
+
+  const switchToSignUp = () => setCurrentScreen('signup')
+  const switchToLogin = () => setCurrentScreen('login')
+
   return (
-    <div className="app">
-      <h1>Group Prototype 1</h1>
-      <p>Welcome — edit <code>src/App.tsx</code> to get started.</p>
-    </div>
+    <>
+      {currentScreen === 'login' ? (
+        <LoginScreen onSignUpClick={switchToSignUp} />
+      ) : (
+        <SignUpScreen onSignInClick={switchToLogin} />
+      )}
+    </>
   )
 }

@@ -1,2 +1,7 @@
 
+<<<<<<< Updated upstream
 1b8b5d10166d3f115aada7473d6abe8752ad6aa2	{"key":"security-advisory:@vitejs/plugin-react:P4XDBxCt1M9jhU3wPSnbYo14hU9TEKKi3dRjV6pE6SGkUMgEqrUpLUvU/o4utnW6O2m8Mrkk3y+AtxEbBn/p0A==","integrity":"sha512-0pSSEgjWfIBC9HS9KYzX0tCnJ3a7dmySPpeDVAjYvzUccEObjQiWQtTl2l6g4KNMfd3L+d3YEQixjuz+cJ7T0w==","time":1773059055098,"size":1716}
+=======
+9d1168dd799bf6a75c0eddf23a9fe74c9638ded6	{"key":"security-advisory:@vitejs/plugin-react:P4XDBxCt1M9jhU3wPSnbYo14hU9TEKKi3dRjV6pE6SGkUMgEqrUpLUvU/o4utnW6O2m8Mrkk3y+AtxEbBn/p0A==","integrity":"sha512-EDBEXp9RnyTfoStR8DxzabAZ0Vrfjl0N/yDJY/PXBROIF94/uNEc87FuORog90OGuoGsffsn90xCiy3bCltAuQ==","time":1774268810175,"size":1707}
+a12f5b7d4cbdf26d2d965036a6ec788c46d2b380	{"key":"security-advisory:@vitejs/plugin-react:P4XDBxCt1M9jhU3wPSnbYo14hU9TEKKi3dRjV6pE6SGkUMgEqrUpLUvU/o4utnW6O2m8Mrkk3y+AtxEbBn/p0A==","integrity":"sha512-EDBEXp9RnyTfoStR8DxzabAZ0Vrfjl0N/yDJY/PXBROIF94/uNEc87FuORog90OGuoGsffsn90xCiy3bCltAuQ==","time":1774270258088,"size":1707}
+>>>>>>> Stashed changes

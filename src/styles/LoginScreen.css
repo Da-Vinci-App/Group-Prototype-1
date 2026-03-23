@@ -1,0 +1,557 @@
+/* ============================================
+   LOGIN SCREEN - YEOVIL COLLEGE BRANDING
+   ============================================ */
+
+/* Color Palette */
+:root {
+  --primary-orange: #FF8A00;
+  --primary-orange-dark: #E67E00;
+  --primary-orange-light: #FFB84D;
+  --secondary-yellow: #FFC107;
+  --accent-green: #4CAF50;
+  --light-gray: #F5F5F5;
+  --medium-gray: #e9ecef;
+  --dark-gray: #495057;
+  --text-dark: #0F172A;
+  --text-light: #64748B;
+  --border-color: #dee2e6;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   GLOBAL STYLES
+   ============================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+}
+
+/* ============================================
+   MAIN CONTAINER
+   ============================================ */
+
+.login-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* ============================================
+   IMAGE SECTION (Left Side)
+   ============================================ */
+
+.login-image-section {
+  flex: 1;
+  position: relative;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.food-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 138, 0, 0.7) 0%,
+    rgba(255, 138, 0, 0.5) 100%
+  );
+  z-index: 1;
+}
+
+.image-content {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 2;
+  color: white;
+  text-align: left;
+}
+
+.image-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.image-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+/* ============================================
+   FORM SECTION (Right Side)
+   ============================================ */
+
+.login-form-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: var(--shadow-md);
+  padding: 48px 32px;
+}
+
+/* ============================================
+   BRANDING SECTION
+   ============================================ */
+
+.branding-section {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.logo-placeholder {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-yellow) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+
+.college-name {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-orange);
+  margin-bottom: 4px;
+  letter-spacing: 0.5px;
+}
+
+.college-subtitle {
+  font-size: 13px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* ============================================
+   WELCOME SECTION
+   ============================================ */
+
+.welcome-section {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.welcome-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+
+.welcome-subtitle {
+  font-size: 14px;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* ============================================
+   FORM INPUTS
+   ============================================ */
+
+.login-form {
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.3px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 2px solid var(--border-color);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: var(--text-dark);
+  font-family: inherit;
+}
+
+.form-input::placeholder {
+  color: var(--text-light);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary-orange);
+  box-shadow: 0 0 0 4px rgba(255, 138, 0, 0.1);
+  background-color: #fff;
+}
+
+.form-input:hover {
+  border-color: var(--secondary-yellow);
+}
+
+/* ============================================
+   PASSWORD FIELD
+   ============================================ */
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px;
+  color: var(--text-light);
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.password-toggle:hover {
+  color: var(--primary-orange);
+}
+
+/* ============================================
+   FORGOT PASSWORD LINK
+   ============================================ */
+
+.forgot-password {
+  margin-bottom: 24px;
+  text-align: right;
+}
+
+.forgot-link {
+  font-size: 13px;
+  color: var(--primary-orange);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.forgot-link:hover {
+  color: var(--primary-orange-dark);
+  text-decoration: underline;
+}
+
+/* ============================================
+   LOGIN BUTTON
+   ============================================ */
+
+.login-button {
+  width: 100%;
+  padding: 14px 24px;
+  background: linear-gradient(135deg, var(--primary-orange) 0%, var(--secondary-yellow) 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-sm);
+  text-transform: uppercase;
+}
+
+.login-button:hover {
+  background: linear-gradient(135deg, var(--primary-orange-dark) 0%, var(--secondary-yellow) 100%);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.login-button:active {
+  transform: translateY(0);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ============================================
+   SIGNUP SECTION
+   ============================================ */
+
+.signup-section {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.signup-text {
+  font-size: 14px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.signup-link {
+  color: var(--primary-orange);
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.signup-link:hover {
+  color: var(--primary-orange-dark);
+  text-decoration: underline;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.form-footer {
+  border-top: 1px solid var(--border-color);
+  padding-top: 16px;
+  text-align: center;
+}
+
+.footer-text {
+  font-size: 12px;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLET
+   ============================================ */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image-section {
+    display: flex;
+    height: 280px;
+    flex: none;
+  }
+
+  .login-form-section {
+    flex: 1;
+    padding: 32px 24px;
+  }
+
+  .form-card {
+    padding: 40px 32px;
+  }
+
+  .image-content {
+    bottom: 24px;
+    left: 24px;
+    right: 24px;
+  }
+
+  .image-title {
+    font-size: 24px;
+  }
+
+  .image-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - DESKTOP
+   ============================================ */
+
+@media (min-width: 1024px) {
+  .login-image-section {
+    display: flex;
+  }
+
+  .login-form-section {
+    padding: 20px;
+  }
+
+  .form-card {
+    padding: 48px 40px;
+  }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE
+   ============================================ */
+
+@media (max-width: 767px) {
+  .login-container {
+    flex-direction: column;
+  }
+
+  .login-image-section {
+    display: flex;
+    height: 240px;
+    flex: none;
+  }
+
+  .login-form-section {
+    flex: 1;
+    padding: 24px 20px;
+  }
+
+  .form-card {
+    padding: 32px 24px;
+    border-radius: 16px;
+  }
+
+  .logo-placeholder {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .college-name {
+    font-size: 14px;
+  }
+
+  .college-subtitle {
+    font-size: 12px;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+  }
+
+  .welcome-subtitle {
+    font-size: 13px;
+  }
+
+  .image-content {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+  }
+
+  .image-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .image-subtitle {
+    font-size: 13px;
+  }
+
+  .form-input {
+    padding: 11px 14px;
+    font-size: 16px;
+  }
+
+  .login-button {
+    padding: 13px 20px;
+    font-size: 14px;
+  }
+
+  .signup-text {
+    font-size: 13px;
+  }
+
+  .footer-text {
+    font-size: 11px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY & ANIMATIONS
+   ============================================ */
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.form-card {
+  animation: slideInUp 0.5s ease-out;
+}
+
+/* Smooth transitions for interactive elements */
+a,
+button,
+input {
+  transition: all 0.3s ease;
+}
+
+/* Focus visible for keyboard navigation */
+.form-input:focus-visible,
+.login-button:focus-visible,
+.forgot-link:focus-visible,
+.signup-link:focus-visible {
+  outline: 2px solid var(--primary-orange);
+  outline-offset: 2px;
+}
+
+/* Media query for forced colors (Windows High Contrast) */
+@media (prefers-contrast: more) {
+  .form-card {
+    border: 2px solid currentColor;
+  }
+
+  .login-button {
+    border: 2px solid white;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
