@@ -1,21 +1,38 @@
-:root {
-  --bg: #f8fafc;
-  --text: #0f172a;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    @apply bg-neutral-light text-text-primary;
+    font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  }
 }
 
-html, body, #root {
-  height: 100%;
-  margin: 0;
-}
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-3 px-4 rounded-2xl transition-colors duration-200 flex items-center justify-center gap-2;
+  }
 
-body {
-  font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-  background: var(--bg);
-  color: var(--text);
-  padding: 2rem;
+  .btn-secondary {
+    @apply bg-neutral hover:bg-gray-200 text-text-primary font-semibold py-3 px-4 rounded-2xl transition-colors duration-200;
+  }
+
+  .card-base {
+    @apply bg-white rounded-2xl shadow-card overflow-hidden;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 hover:shadow-lg hover:scale-105;
+  }
 }
 
 .app {
-  max-width: 720px;
-  margin: 0 auto;
+  background: linear-gradient(135deg, #FAFAFA 0%, #F5F5F5 100%);
+  min-height: 100vh;
 }
